@@ -1,0 +1,343 @@
+/* Contacts module: load after ../css/style.css. All overrides are scoped. */
+.page-contacts {
+    --contacts-navy: var(--navy, #0f2d52);
+    --contacts-sky: var(--sky, #4fc3ff);
+    --contacts-border: #dce7f2;
+}
+.page-contacts .nav a.active:after{
+    bottom: 8px;
+}
+.page-contacts .contacts-hero {
+    min-height: 600px;
+    background: var(--contacts-navy);
+}
+
+.page-contacts .contacts-hero .hero-image {
+    inset: 0;
+    background-image: url('../assets/hero_contact.webp');
+    background-position: center;
+    background-size: cover;
+    opacity: .42;
+}
+
+.page-contacts .contacts-hero .hero-shade {
+    inset: 0;
+    background: linear-gradient(90deg, #0b2442 0%, rgba(11, 36, 66, .94) 37%, rgba(11, 36, 66, .48) 100%);
+}
+
+.page-contacts .contacts-hero .hero-content {
+    padding-top: 305px;
+    padding-bottom: 105px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.page-contacts .contacts-hero h1 {
+    max-width: 1000px;
+    font-size: clamp(24px, 2.8vw, 40px);
+    line-height: 1.2;
+    letter-spacing: -.02em;
+    margin: 18px 0 28px;
+    color: #f4faff;
+}
+
+.page-contacts .contacts-hero .contacts-lead {
+    max-width: 660px;
+    font-size: clamp(16px, 1.2vw, 19px);
+    line-height: 1.45;
+    color: #e3edf9;
+    margin: 0 0 34px;
+}
+
+.page-contacts .contacts-content {
+    background: #fff;
+}
+
+.page-contacts .contacts-content .contact-grid {
+    align-items: start;
+}
+
+.page-contacts .contacts-details {
+    display: grid;
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.page-contacts .contacts-details > a, .page-contacts .contacts-details > div {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    color: var(--contacts-navy);
+    font-weight: 600;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.page-contacts .contacts-details a:hover {
+    color: #1289d3;
+}
+
+.page-contacts .contact-icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 46px;
+    height: 46px;
+    border-radius: 13px;
+    background: #eaf5fd;
+    color: #168ed5;
+    font-size: 24px;
+}
+
+.page-contacts .contacts-form-heading {
+    font-size: clamp(25px, 3vw, 38px);
+    font-weight: 700;
+    color: var(--contacts-navy);
+    margin: 0 0 24px;
+}
+
+.page-contacts .contacts-map-section {
+    background: #f6f9fc;
+}
+
+.page-contacts .contacts-map-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.page-contacts .contacts-map-heading h2 {
+    margin: 8px 0 12px;
+}
+
+.page-contacts .contacts-map-heading p:last-child {
+    color: #60718a;
+}
+
+.page-contacts .contacts-map-link {
+    background: var(--contacts-navy);
+    color: #fff;
+    white-space: nowrap;
+}
+
+.page-contacts .contacts-map-frame {
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid var(--contacts-border);
+    min-height: 410px;
+    background: #eaf1f6;
+}
+
+.page-contacts .contacts-map-frame iframe {
+    display: block;
+    border: 0;
+    width: 100%;
+    height: 410px;
+}
+.page-contacts .contact-form {
+    background: #f6f9fc;}
+@media (max-width: 900px) {
+    .page-contacts .contacts-hero {
+        min-height: 510px
+    }
+
+    .page-contacts .contacts-hero .hero-content {
+        padding-top: 255px;
+        padding-bottom: 75px
+    }
+
+    .page-contacts .contacts-map-heading {
+        align-items: start;
+        flex-direction: column
+    }
+}
+
+@media (max-width: 600px) {
+    .page-contacts .contacts-hero {
+        min-height: 480px
+    }
+
+    .page-contacts .contacts-hero .hero-content {
+        padding-top: 210px;
+        padding-bottom: 65px
+    }
+
+    .page-contacts .contacts-hero h1 {
+        font-size: clamp(22px, 5.5vw, 32px)
+    }
+
+    .page-contacts .contacts-details {
+        gap: 15px
+    }
+
+    .page-contacts .contacts-map-frame, .page-contacts .contacts-map-frame iframe {
+        min-height: 320px;
+        height: 320px
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-contacts * {
+        scroll-behavior: auto
+    }
+}
+
+/* Animated hero title: shared Services particle renderer, Contacts-only positioning.
+   Adjust top below to move the wordmark vertically on each breakpoint. */
+.page-contacts .contacts-hero {
+    position: relative;
+    min-height: 740px;
+}
+
+.page-contacts .contacts-hero .hero-wordmark-slot {
+    position: absolute;
+    top: 150px;
+    left: max(30px, calc((100% - 1780px) / 2));
+    width: min(1120px, calc(100% - 60px));
+    height: clamp(65px, 9vw, 158px);
+    pointer-events: none;
+}
+
+.page-contacts .contacts-hero .consult-particles {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.page-contacts .contacts-hero #consult-particles-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+}
+
+.page-contacts .contacts-hero .hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+@media (max-width: 1100px) {
+    .page-contacts .contacts-hero .hero-wordmark-slot {
+        top: 230px;
+        left: 32px;
+        width: calc(100% - 64px);
+        height: 85px;
+    }
+    .page-contacts .contacts-hero .hero-content{
+    display: flex;
+    flex-direction: column;justify-content: center;align-items: center;text-align: center;
+    }
+    .page-contacts .contacts-hero .hero-image {
+        inset: 0 0 0 -65%;
+
+        background-position: center;
+        background-size: cover;
+        opacity: .42;
+    }
+    .page-contacts .contacts-hero .hero-shade {
+        inset: 0;
+        background: linear-gradient(180deg, #0b2442 0%, rgba(11, 36, 66, .94) 37%, rgba(11, 36, 66, .48) 100%);
+    }
+}
+
+@media (max-width: 760px) {
+    .page-contacts .contacts-hero .hero-wordmark-slot {
+        top: 275px;
+        left: 20px;
+        width: calc(100% - 40px);
+        height: clamp(46px, 9vw, 74px);
+    }
+    .page-contacts .contacts-hero .hero-image {
+        inset: 0 0 0 -65%;
+        background-position: center bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: .42;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-contacts .contacts-hero .hero-wordmark-slot {
+        top: 255px;
+    }
+}
+
+/* Contacts-only form layout: the heading is not a grid field. */
+.page-contacts .contact-form {
+    min-width: 0;
+}
+
+.page-contacts .contact-form .contacts-form-heading {
+    grid-column: 1 / -1;
+    margin-bottom: 6px;
+}
+
+.page-contacts .contact-form .form-footer,
+.page-contacts .contact-form .form-status {
+    grid-column: 1 / -1;
+}
+
+.page-contacts .contact-form .field {
+    min-width: 0;
+}
+
+.page-contacts .contact-form .field input,
+.page-contacts .contact-form .field select,
+.page-contacts .contact-form .field textarea {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* Social links under the contact details, visually separate from footer links. */
+.page-contacts .contacts-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid var(--contacts-border);
+}
+
+.page-contacts .contacts-social-link {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: #eaf5fd;
+    border: 1px solid var(--contacts-border);
+    color: #168ed5;
+    transition: background-color .25s ease, color .25s ease, transform .25s ease;
+}
+
+.page-contacts .contacts-social-link:hover,
+.page-contacts .contacts-social-link:focus-visible {
+    background: var(--contacts-navy);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.page-contacts .contacts-social-link svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.page-contacts .contacts-social-link:first-child svg {
+    fill: currentColor;
+    stroke: none;
+}
+
+@media (max-width: 600px) {
+    .page-contacts .contact-form .contacts-form-heading {
+        grid-column: auto;
+    }
+}

@@ -1,0 +1,18 @@
+CONSULT HUB — GITHUB PAGES
+
+1. Upload the CONTENTS of this folder directly to the root of the GitHub repository consult_hub (not into an additional folder).
+2. Delete the old Consult_Hub/ folder from the repository to avoid confusion.
+3. Settings > Pages > Deploy from a branch > main > /(root).
+4. Open https://krupskiy35.github.io/consult_hub/
+5. GitHub Pages is static: server-side form submissions require an external endpoint.
+6. SEO canonical/hreflang point to consulthub.com.ua and should be changed if GitHub Pages becomes the public indexed site.
+7. The home page HTML files are at repository root. Their local CSS, JS and images remain in index/ to avoid disrupting visual behavior.
+
+AUDIT
+- HTML files: 24
+- Local HTML resource/link references checked: 569
+- Broken local HTML references after repair: 0
+- The source archive does not contain the local Montserrat fonts referenced by index/style.css. Browser fallback fonts will be used unless those font files are supplied.
+- The Italian homepage had links to EN pages; these were changed to IT.
+- Two CSS image URLs pointed to absent PNGs; changed to included WebP assets.
+- Dynamic JS navigation, backend forms and animation rendering should also be tested in a real browser after publishing.

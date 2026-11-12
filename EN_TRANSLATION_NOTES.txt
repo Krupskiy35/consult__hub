@@ -1,0 +1,7 @@
+Consult Hub — English localization
+
+English HTML pages: Home/index-en.html, Services/services-en.html, Ukraine_Desk/ukraine-desk-en.html, Contacts/contacts-en.html, Blog/blog-en.html and Blog/articles/article-01-en.html through article-03-en.html.
+
+All visible Ukrainian body copy on these eight pages has been translated into English. Original Ukrainian HTML files, stylesheets, scripts and assets remain in the package. Existing internal HTML links and fragment anchors have been checked statically (470 href attributes, 0 missing targets). 
+
+Open through an HTTP server (e.g., WebStorm localhost), not file://. Forms, animation, responsive behavior and external URLs require browser/production testing. Italian language is not implemented. The published privacy-policy PDF is still the original document and has not been translated. The English copy reflects the supplied Ukrainian source and factual claims have not been independently verified.

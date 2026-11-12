@@ -1,0 +1,10 @@
+CONSULT HUB — HANDOFF / ПЕРЕДАЧА РОЗРОБНИКУ
+
+1. Start Home/index.html via an HTTP server (WebStorm localhost, VS Code Live Server, etc.), not file://.
+2. Ukrainian and English HTML routes are linked in the header; Italian remains disabled.
+3. Shared JS/CSS and animation code were preserved.
+4. EN PAGES ARE TRANSLATION DRAFTS: shared UI and many headings are translated, but long-form Ukrainian text remains and requires professional English localization before launch. Do not publish EN pages as final.
+5. The HTML form submission requires backend integration and real end-to-end testing.
+6. Canonical and hreflang links assume the existing folder structure on consulthub.com.ua. Update them to the final public URLs before launch.
+7. Navigation paths were statically validated; interactive browser regression testing is still required.
+8. Some social links are generic placeholders; replace with verified official URLs.

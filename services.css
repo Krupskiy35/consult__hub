@@ -1,0 +1,511 @@
+/* CONSULT HUB — Services page only. */
+
+:root {
+    --services-hero-lead: #e4ebf5;
+    --services-eyebrow: #b5dcff;
+    --services-icon: #38bdf8;
+    --services-card: #f1f5fa;
+    --services-number-border: #b5dfff;
+    --services-body-text: #415978;
+    --services-list-marker: #28aef0;
+    --services-result-text: #315173;
+    --services-process-bg: #0c2440;
+    --services-step-border: #ffffff57;
+    --services-step-text: #c8d7e9;
+    --services-cta-tint: #eaf5ff;
+    --services-shade-68: #0b2442ad;
+    --services-shade-32: #0b244252;
+    --services-shade-54: #0b24428a;
+    --services-shade-09: #0b244218;
+    --services-shade-52: #0b244285;
+    --services-shade-97: #0b2442f7;
+    --services-shade-31: #0b24424f;
+    --services-shade-clear: #0b244200;
+    --navy-soft: #0b2442;
+    --blue-deep: #1B4B80;
+    --surface-blue: #E4F2FF;
+    --white: #FFFFFF;
+}
+
+/* 02 · Hero and page-specific overrides */
+.page-services .hero .hero-content {
+
+
+    max-width: 1780px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 220px;
+}
+.page-services .hero-image {
+    position: absolute;
+    inset: 0 0 0 32%;
+    background-image: url(../assets/hero_services.webp);
+    background-size: cover;
+    background-position: center bottom;
+    opacity: 1;
+    transition: transform 1.25s cubic-bezier(.2, .65, .2, 1), filter 1.25s ease;
+    will-change: transform;
+}
+.page-services .button-outline {
+    min-width: 240px;
+}
+.page-services .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+}
+.page-services .contact-section {
+    background-image: url(../assets/contact.webp);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page-services .services-hero .hero-content h1 {
+    width: 100%;
+    max-width: 800px;
+    min-width: 0;
+    margin: 40px 0 40px;
+    font-size: clamp(25px, 2.0vw, 38px);
+    line-height: 1.2;
+    font-weight: 300;
+    white-space: normal;
+    overflow-wrap: break-word;
+    text-align: left;
+}
+
+.page-services .services-hero-lead {
+    max-width: 850px;
+    color: var(--services-hero-lead);
+    font-size: clamp(16px, 1.2vw, 19px);
+    line-height: 1.75;
+    margin: 0;
+}
+
+.page-services .services-hero .hero-buttons {
+    margin-top: 34px;
+}
+
+.page-services .services-hero .eyebrow {
+    color: var(--services-eyebrow);
+}
+.page-services .expertise{
+    border-bottom: none;
+}
+.page-services .services-step svg {
+    width: 24px;
+    height: 24px;
+    color: var(--services-icon);
+    stroke-width: 1.7;
+    flex-shrink: 0;
+}
+.page-services .expertise-grid{
+    padding: 15px 0;
+}
+.page-services .expertise-grid > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    gap: 0;
+}
+
+/* 03 · Services catalog */
+.page-services .services-catalog {
+    padding-block: 110px 130px;
+    background: var(--white);
+}
+
+.page-services .services-catalog .section-heading {
+    margin-bottom: 64px;
+}
+
+.page-services .services-catalog-list {
+    display: grid;
+    gap: 18px;
+}
+
+.page-services .service-detail {
+    display: grid;
+    grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(30px, 5vw, 95px);
+    padding: clamp(30px, 4.2vw, 70px);
+    background: var(--services-card);
+    border-radius: 22px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-services .service-detail:nth-child(even) {
+    background: var(--surface-blue);
+}
+
+.page-services .service-detail::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: var(--sky);
+}
+
+.page-services .service-detail-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border: 1px solid var(--services-number-border);
+    border-radius: 50%;
+    color: var(--blue-deep);
+    font-size: 16px;
+    margin-bottom: 26px;
+}
+
+.page-services .service-detail h3 {
+    font-size: clamp(25px, 2.1vw, 36px);
+    line-height: 1.2;
+    font-weight: 400;
+    color: var(--navy);
+    margin: 0 0 22px;
+}
+.page-services .nav a.active:after {
+    content: "";
+    position: absolute;
+    bottom: 9px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--sky);
+
+}
+.page-services .service-detail p {
+    margin: 0;
+    color: var(--services-body-text);
+    line-height: 1.75;
+}
+
+.page-services .service-detail-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+}
+
+.page-services .service-detail-label {
+    font-weight: 600;
+    color: var(--navy) !important;
+    margin-bottom: 16px !important;
+}
+
+.page-services .service-detail ul {
+    list-style: none;
+    margin: 0 0 25px;
+    padding: 0;
+    display: grid;
+    gap: 13px;
+}
+
+.page-services .service-detail li {
+    position: relative;
+    padding-left: 22px;
+    color: var(--services-body-text);
+    line-height: 1.6;
+}
+
+.page-services .service-detail li::before {
+    content: "+";
+    position: absolute;
+    left: 0;
+    color: var(--services-list-marker);
+    font-weight: 700;
+}
+
+.page-services .service-result {
+    padding: 22px 24px;
+    background: var(--services-cta-tint);
+    border-radius: 12px;
+    color: var(--services-result-text);
+    line-height: 1.6;
+    border-left: 3px solid var(--sky);
+}
+
+.page-services .service-result strong {
+    color: var(--navy);
+}
+
+/* 04 · Process */
+.page-services .services-process {
+    padding-block: 110px 125px;
+    background: var(--services-process-bg);
+    color: var(--services-cta-tint);
+    overflow: hidden;
+}
+
+.page-services .services-process .section-heading {
+    margin-bottom: 65px;
+    position: relative;
+    z-index: 2;
+}
+
+.page-services .services-process h2 {
+    color: var(--services-cta-tint);
+}
+
+.page-services .services-steps {
+    display: grid;
+    grid-template-columns:repeat(5, minmax(0, 1fr));
+    gap: 22px;
+    position: relative;
+    z-index: 2;
+}
+
+.page-services .services-steps .process-step {
+    border: 1px solid var(--services-step-border);
+    border-top: 4px solid var(--sky);
+    border-radius: 15px;
+    padding: 14px;
+    min-width: 0;
+    transition: opacity .7s ease, transform .6s cubic-bezier(.22, 1, .36, 1);
+}
+
+.page-services .services-steps .process-step.reveal.visible:hover {
+    transform: translateY(-10px);
+}
+
+.page-services .services-steps .step-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    background: var(--sky);
+    color: var(--navy);
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.page-services .services-steps h3 {
+    font-size: clamp(18px, 1.35vw, 23px);
+    line-height: 1.35;
+    font-weight: 400;
+    color: var(--services-cta-tint);
+    margin-bottom: 15px;
+}
+
+.page-services .services-steps p {
+    font-size: 15px;
+    color: var(--services-step-text);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* 05 · CTA */
+.page-services .services-cta-section {
+    padding-block: 115px;
+    background: linear-gradient(135deg, var(--services-cta-tint), var(--services-cta-tint) 72%);
+}
+
+.page-services .services-cta-layout {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: clamp(30px, 6vw, 100px);
+    align-items: center;
+}
+
+.page-services .services-cta-layout p:not(.eyebrow) {
+    color: var(--services-body-text);
+    line-height: 1.75;
+    margin: 0 0 20px;
+}
+
+.page-services .services-cta-layout .button {
+    margin-top: 16px;
+}
+
+/* 06 · Responsive layout */
+/* Shared form and footer remain in style.css. */
+@media (max-width: 1100px) {
+    .page-services .services-steps {
+        grid-template-columns:repeat(3, minmax(0, 1fr));
+    }
+
+    .page-services .services-hero .hero-content {
+        padding-top: 240px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .page-services .service-detail {
+        gap: 35px;
+    }
+    .page-services .services-hero .hero-content h1{
+        text-align: center;
+    }
+    .page-services .services-hero-lead {
+        max-width: 750px;}
+    .page-services .hero-image {
+        position: absolute;
+        inset: 0 0 0 0;}
+    .page-services .hero-shade {
+        background:
+                linear-gradient(
+                        90deg,
+                        var(--navy-soft) 0%,
+                        var(--services-shade-68) 28%,
+                        var(--services-shade-32) 42%,
+                        var(--services-shade-54) 65%,
+                        var(--services-shade-09) 100%
+                ),
+                linear-gradient(
+                        0deg,
+                        var(--services-shade-52),
+                        transparent 50%
+                );
+    }
+    .page-services .direction-grid, .page-services .why-grid, .page-services .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .page-services .services-hero .hero-content {
+        padding-top: 205px;
+        padding-bottom: 80px;
+    }
+
+    .page-services .services-hero .hero-content h1 {
+        margin-bottom: 22px;
+    }
+
+    .page-services .services-catalog, .page-services .services-process, .page-services .services-cta-section {
+        padding-block: 70px;
+    }
+
+    .page-services .services-catalog .section-heading {
+        margin-bottom: 36px;
+    }
+
+    .page-services .service-detail {
+        grid-template-columns:1fr;
+        gap: 25px;
+        padding: 28px 23px;
+    }
+
+    .page-services .service-detail-number {
+        margin-bottom: 20px;
+    }
+
+    .page-services .services-steps {
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+    .page-services .services-cta-layout {
+        grid-template-columns:1fr;
+        gap: 25px;
+    }
+
+    .page-services .expertise-grid {
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+    .page-services .hero-buttons {
+        width: 90%;
+        justify-content: center;
+    }
+    .page-services .hero-image {
+        background-position: center;
+        inset: 0 0 0 -50%;
+    }
+    .page-services .hero-shade {
+        background: linear-gradient(90deg, var(--services-shade-97), var(--services-shade-31) 55%, var(--services-shade-clear));}
+}
+.page-services .process-step:before {
+    display: none;
+}
+@media (max-width: 480px) {
+    .page-services .services-steps {
+        grid-template-columns:1fr;
+    }
+
+    .page-services .services-hero .hero-content {
+        padding-top: 175px;
+    }
+
+    .page-services .service-detail h3 {
+        font-size: 26px;
+    }
+    .page-services .hero-image {
+        background-position: center;
+        inset: 0 0 0 -90%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-services .services-steps .process-step {
+        transition: none;
+    }
+}
+
+
+/* 07 · Particle wordmark positioning */
+.page-services .services-hero {
+    position: relative;
+    min-height: 740px;
+}
+.page-services .services-hero .hero-wordmark-slot {
+    position: absolute;
+    top: 280px;
+    left: max(30px, calc((100% - 1780px) / 2));
+    width: min(1120px, calc(100% - 60px));
+    height: clamp(65px, 9vw, 158px);
+    pointer-events: none;
+}
+.page-services .services-hero .consult-particles {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 1;
+}
+.page-services .services-hero #consult-particles-canvas {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+@media (max-width: 1100px) {
+    .page-services .services-hero .hero-wordmark-slot {
+        top: 290px;
+        left: 32px;
+        width: calc(100% - 64px);
+        height: 80px;
+    }
+    .page-services .services-hero .consult-particles {
+        opacity: 0.95;
+        top: -50px;
+    }
+}
+@media (max-width: 760px) {
+    .page-services .services-hero .hero-wordmark-slot {
+        top: 232px;
+        left: 20px;
+        width: calc(100% - 40px);
+        height: clamp(46px, 9vw, 74px);
+    }
+}
+@media (max-width: 580px) {
+    .page-services .services-hero .hero-wordmark-slot {
+        top: 142px;
+        left: 20px;
+        width: calc(100% - 40px);
+        height: clamp(46px, 9vw, 74px);
+    }
+}
